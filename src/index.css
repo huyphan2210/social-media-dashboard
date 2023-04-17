@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+  /* Primary */
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram-start: hsl(37, 97%, 70%);
+  --instagram-end: hsl(329, 70%, 58%);
+  --youtube: hsl(348, 97%, 39%);
+
+  /* Dark theme */
+  --toggle-dark-start: hsl(210, 78%, 56%);
+  --toggle-dark-end: hsl(146, 68%, 55%);
+
+  --dark-bg: hsl(230, 17%, 14%);
+  --dark-top-bg: hsl(232, 19%, 15%);
+  --dark-card-bg: hsl(228, 28%, 20%);
+  --dark-text: hsl(228, 34%, 66%);
+  --dark-text-2: white;
+  
+  /* Light theme */
+  --toggle-light: hsl(230, 22%, 74%);
+
+  --light-bg: white;
+  --light-top-bg: hsl(225, 100%, 98%);
+  --light-card-bg: hsl(227, 47%, 96%);
+  --light-text: hsl(228, 12%, 44%);
+  --light-text-2: hsl(230, 17%, 14%);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: linear-gradient(
+    to bottom,
+    var(--light-top-bg) 0vh,
+    var(--light-top-bg) 25vh,
+    var(--light-bg) 25vh,
+    var(--light-bg) 100%
+    );
+  padding: 2rem 10rem;
+}
