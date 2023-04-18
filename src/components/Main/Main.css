@@ -5,8 +5,8 @@ main {
 }
     .accounts {
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        gap: 2rem;
+        grid-template-columns: 23% 23% 23% 23%;
+        gap: calc(8% / 3);
         transform: translate(0, -50%);
         font-weight: 700;
     }
@@ -21,8 +21,9 @@ main {
 
         .overview-analytics {
             display: grid;
-            grid-template-columns: auto auto auto auto;
-            gap: 2rem;
+            grid-template-columns: 23% 23% 23% 23%;
+            gap: calc(8% / 3);
+            row-gap: 2rem;
         }
 
 
@@ -59,6 +60,7 @@ main {
     .accounts {
         transform: none;
         grid-template-columns: auto;
+        row-gap: 2rem;
     }
 
     .overview {
