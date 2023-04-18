@@ -1,7 +1,7 @@
 [
     {
         "title": "Page Views",
-        "img": "./assets/images/icon-facebook.svg",
+        "img": ".public/assets/images/icon-facebook.svg",
         "number": 87,
         "isIncreased": true,
         "changePercent": 3
