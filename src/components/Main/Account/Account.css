@@ -1,0 +1,68 @@
+.account-card {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--card-bg);
+    border-radius: 0.5rem; 
+}
+    .account-card::before {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: 0.3rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .facebook::before {
+        background: var(--facebook);
+    }
+    .twitter::before {
+        background: var(--twitter);
+    }
+    .instagram::before {
+        background: linear-gradient(to right, var(--instagram-start), var(--instagram-end));
+    }
+    .youtube::before {
+        background: var(--youtube);
+    }
+
+    .account-card-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2rem;
+    }
+        .account-card-title span {
+            color: var(--text);
+            margin-left: 0.5rem;
+        }
+
+    
+        .num-of-followers h1 {
+            font-size: clamp(3rem, 3vw, 4rem);
+            margin-block-start: 0;
+            margin-block-end: 0.5rem;
+            color: var(--text-2);
+        }
+        .social-label {
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+        }
+    
+    .change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--lime-green);
+    }
+        .change img {
+            margin-right: 0.5rem;
+        }
+        
+    .decrease {
+        color: var(--bright-red) !important;
+    }
