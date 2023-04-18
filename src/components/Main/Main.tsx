@@ -2,8 +2,42 @@ import './Main.css'
 import Account from './Account/Account';
 import OverviewCard from './OverviewCard/OverviewCard';
 
-import accountData from '../../data/accounts.json';
 import overviewData from '../../data/overview.json';
+const accountData = [
+  {
+      "img": "../assets/images/icon-facebook.svg",
+      "name": "@nathanf",
+      "numOfFollowers": 1987,
+      "isIncreased": true,
+      "numOfChange": 12,
+      "typeOfSocialMedia": "facebook"
+  },
+  {
+      "img": "../assets/images/icon-twitter.svg",
+      "name": "@nathanf",
+      "numOfFollowers": 1044,
+      "isIncreased": true,
+      "numOfChange": 99,
+      "typeOfSocialMedia": "twitter"
+  },
+  {
+      "img": "../assets/images/icon-instagram.svg",
+      "name": "@realnathanf",
+      "numOfFollowers": "11k",
+      "isIncreased": true,
+      "numOfChange": 1099,
+      "typeOfSocialMedia": "instagram"
+  },
+  {
+      "img": "../assets/images/icon-youtube.svg",
+      "name": "Nathan F.",
+      "numOfFollowers": 8239,
+      "isIncreased": false,
+      "numOfChange": 144,
+      "typeOfSocialMedia": "youtube"
+  }
+]
+
 function Main() {
 
   return (
