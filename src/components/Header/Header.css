@@ -2,6 +2,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 2vh;
+    width: 90%;
+    max-width: 1440px;
+    font-weight: 700;
 }
     .light-dark-toggle {
         display: flex;
@@ -31,3 +36,32 @@ header {
                 transform: translate(0, -50%);
                 transition: 0.5s;
             }
+
+        #dashboard-title {
+            margin-block-start: 0;
+            margin-block-end: 0.5rem;
+            color: var(--text-2);
+        }
+
+        label {
+            color: var(--text);
+        }
+
+@media screen and (max-aspect-ratio: 1) and (max-width: 768px) {
+    header{
+        top: 2rem;
+        flex-direction: column;
+        align-items: normal;
+    }
+        .light-dark-toggle {
+            top: 1rem;
+            margin-block-start: 1rem;
+            padding-block-start: 1rem;
+            justify-content: space-between;
+            border-block-start: 0.1rem var(--text) solid;
+        }
+
+            #dashboard-title {
+                font-size: 1.5rem;
+            }
+}

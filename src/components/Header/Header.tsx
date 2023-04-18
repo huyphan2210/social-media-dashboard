@@ -1,29 +1,60 @@
-import { MouseEvent } from 'react';
+import { MouseEvent, useEffect } from 'react';
 import './Header.css'
 
 function Header() {
+  const darkBg = 'hsl(230, 17%, 14%)';
+  const darkTopBg = 'hsl(232, 19%, 15%)';
+  const darkCardbg = 'hsl(228, 28%, 20%)';
+  const darkText = 'hsl(228, 34%, 66%)';
+  const darkText2 = 'white';
 
   function hanldeToggle(e: MouseEvent<HTMLDivElement>) {
-    const body = document.getElementsByTagName('body')[0];
+    const root = document.querySelector(':root') as HTMLElement;
     const circle = e.currentTarget.getElementsByClassName('circle')[0]
     const toggle = e.currentTarget;
     const circleStyle = circle.getAttribute('style');
 
     if (circleStyle) {
+      localStorage.setItem('bg', '');
       circle.setAttribute('style', '');
       toggle.style.background = '';
-      body.style.background = '';
+      root.style.setProperty('--bg', '');
+      root.style.setProperty('--top-bg', '');
+      root.style.setProperty('--card-bg', '');
+      root.style.setProperty('--text', '');
+      root.style.setProperty('--text-2', '');
     } else {
-      circle.setAttribute('style', 'left: 0.1rem;');
+      localStorage.setItem('bg', 'dark');
+      root.style.setProperty('--bg', darkBg);
+      root.style.setProperty('--top-bg', darkTopBg);
+      root.style.setProperty('--card-bg', darkCardbg);
+      root.style.setProperty('--text', darkText);
+      root.style.setProperty('--text-2', darkText2);
+      circle.setAttribute('style', 'left: 0.2rem;');
       toggle.setAttribute('style', 'background: linear-gradient(to right, var(--toggle-dark-start), var(--toggle-dark-end));');
-      body.setAttribute('style', 'background: linear-gradient(to bottom, var(--dark-top-bg) 0vh, var(--dark-top-bg) 25vh, var(--dark-bg) 25vh, var(--dark-bg) 100%);');
     }
   }
+  useEffect(() => {
+    const theme = localStorage.getItem('bg');
+    if (theme) {
+      const root = document.querySelector(':root') as HTMLElement;
+      const toggle = document.getElementsByClassName('custom-input')[0];
+      const circle = toggle.getElementsByClassName('circle')[0];
+
+      root.style.setProperty('--bg', darkBg);
+      root.style.setProperty('--top-bg', darkTopBg);
+      root.style.setProperty('--card-bg', darkCardbg);
+      root.style.setProperty('--text', darkText);
+      root.style.setProperty('--text-2', darkText2);
+      circle.setAttribute('style', 'left: 0.2rem;');
+      toggle.setAttribute('style', 'background: linear-gradient(to right, var(--toggle-dark-start), var(--toggle-dark-end));');
+    }
+  })
   return (
     <header>
       <div className='title'>
-        <h1>Social Media Dashboard</h1>
-        <p>Total follower: 23,004</p>
+        <h1 id='dashboard-title'>Social Media Dashboard</h1>
+        <label htmlFor='dashboard-title'>Total follower: 23,004</label>
       </div>
       <div className='light-dark-toggle'>
         <label htmlFor='custom-input'>Dark mode</label>
