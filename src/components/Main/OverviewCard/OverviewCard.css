@@ -1,0 +1,29 @@
+.overview-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+    .overview-card-title, .numbers, .numbers span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .overview-card-title {
+        color: var(--text);
+    }
+    .numbers {
+        margin-block-start: 1rem;
+    }
+        .numbers h2 {
+            font-size: 2rem;
+            margin-block: 0;
+            color: var(--text-2);
+        }
+        .numbers span {
+            color: var(--lime-green);
+        }
+        .numbers span img {
+            margin-right: 0.5rem;
+        }
