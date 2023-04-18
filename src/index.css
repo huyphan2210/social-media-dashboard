@@ -14,21 +14,15 @@
   /* Dark theme */
   --toggle-dark-start: hsl(210, 78%, 56%);
   --toggle-dark-end: hsl(146, 68%, 55%);
-
-  --dark-bg: hsl(230, 17%, 14%);
-  --dark-top-bg: hsl(232, 19%, 15%);
-  --dark-card-bg: hsl(228, 28%, 20%);
-  --dark-text: hsl(228, 34%, 66%);
-  --dark-text-2: white;
   
   /* Light theme */
   --toggle-light: hsl(230, 22%, 74%);
 
-  --light-bg: white;
-  --light-top-bg: hsl(225, 100%, 98%);
-  --light-card-bg: hsl(227, 47%, 96%);
-  --light-text: hsl(228, 12%, 44%);
-  --light-text-2: hsl(230, 17%, 14%);
+  --bg: white;
+  --top-bg: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --text: hsl(228, 12%, 44%);
+  --text-2: hsl(230, 17%, 14%);
 }
 
 body {
@@ -37,10 +31,15 @@ body {
   font-family: Inter, sans-serif;
   background: linear-gradient(
     to bottom,
-    var(--light-top-bg) 0vh,
-    var(--light-top-bg) 25vh,
-    var(--light-bg) 25vh,
-    var(--light-bg) 100%
+    var(--top-bg) 0vh,
+    var(--top-bg) 25vh,
+    var(--bg) 25vh,
+    var(--bg) 100%
     );
-  padding: 2rem 10rem;
 }
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
