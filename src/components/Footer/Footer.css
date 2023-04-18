@@ -1,7 +1,15 @@
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0;
     bottom: 1vh;
     text-align: center;
+    color: var(--text);
+}
+
+@media screen and (max-aspect-ratio: 1) {
+    footer {
+        position: static;
+        margin-block: 1rem;
+    }
 }
