@@ -1,4 +1,5 @@
 import './Main.css';
+
 import facebook from '../../assets/images/icon-facebook.svg';
 import twitter from '../../assets/images/icon-twitter.svg';
 import instagram from '../../assets/images/icon-instagram.svg';
@@ -100,7 +101,6 @@ const overviewData = [
       "changePercent": 12
   }
 ]
-
 
 function Main() {
 
