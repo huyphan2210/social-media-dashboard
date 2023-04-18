@@ -7,7 +7,6 @@ import youtube from '../../assets/images/icon-youtube.svg';
 import Account from './Account/Account';
 import OverviewCard from './OverviewCard/OverviewCard';
 
-import overviewData from '../../data/overview.json';
 const accountData = [
   {
       "img": facebook,
@@ -42,6 +41,66 @@ const accountData = [
       "typeOfSocialMedia": "youtube"
   }
 ]
+
+const overviewData = [
+  {
+      "title": "Page Views",
+      "img": facebook,
+      "number": 87,
+      "isIncreased": true,
+      "changePercent": 3
+  },
+  {
+      "title": "Likes",
+      "img": facebook,
+      "number": 52,
+      "isIncreased": false,
+      "changePercent": 2
+  },
+  {
+      "title": "Likes",
+      "img": instagram,
+      "number": 5462,
+      "isIncreased": true,
+      "changePercent": 2257
+  },
+  {
+      "title": "Profile Views",
+      "img": instagram,
+      "number": "52k",
+      "isIncreased": true,
+      "changePercent": 1375
+  },
+  {
+      "title": "Retweets",
+      "img": twitter,
+      "number": 117,
+      "isIncreased": true,
+      "changePercent": 303
+  },
+  {
+      "title": "Likes",
+      "img": twitter,
+      "number": 507,
+      "isIncreased": true,
+      "changePercent": 553
+  },
+  {
+      "title": "Likes",
+      "img": youtube,
+      "number": 107,
+      "isIncreased": false,
+      "changePercent": 19
+  },
+  {
+      "title": "Total Views",
+      "img": youtube,
+      "number": 1407,
+      "isIncreased": false,
+      "changePercent": 12
+  }
+]
+
 
 function Main() {
 
