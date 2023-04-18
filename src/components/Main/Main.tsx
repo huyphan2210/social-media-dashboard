@@ -1,11 +1,16 @@
-import './Main.css'
+import './Main.css';
+import facebook from '../../assets/images/icon-facebook.svg';
+import twitter from '../../assets/images/icon-twitter.svg';
+import instagram from '../../assets/images/icon-instagram.svg';
+import youtube from '../../assets/images/icon-youtube.svg';
+
 import Account from './Account/Account';
 import OverviewCard from './OverviewCard/OverviewCard';
 
 import overviewData from '../../data/overview.json';
 const accountData = [
   {
-      "img": "../assets/images/icon-facebook.svg",
+      "img": facebook,
       "name": "@nathanf",
       "numOfFollowers": 1987,
       "isIncreased": true,
@@ -13,7 +18,7 @@ const accountData = [
       "typeOfSocialMedia": "facebook"
   },
   {
-      "img": "../assets/images/icon-twitter.svg",
+      "img": twitter,
       "name": "@nathanf",
       "numOfFollowers": 1044,
       "isIncreased": true,
@@ -21,7 +26,7 @@ const accountData = [
       "typeOfSocialMedia": "twitter"
   },
   {
-      "img": "../assets/images/icon-instagram.svg",
+      "img": instagram,
       "name": "@realnathanf",
       "numOfFollowers": "11k",
       "isIncreased": true,
@@ -29,7 +34,7 @@ const accountData = [
       "typeOfSocialMedia": "instagram"
   },
   {
-      "img": "../assets/images/icon-youtube.svg",
+      "img": youtube,
       "name": "Nathan F.",
       "numOfFollowers": 8239,
       "isIncreased": false,
